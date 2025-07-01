@@ -12,7 +12,6 @@ THEME_FILE="${EXTENSION_DIRECTORY}/themes/wal-theme.json"
 # If the wal colour scheme file does not exist, exit with an error
 if [[ ! -f "${WAL_COLOURS_FILE}" ]]; then
 	echo "error: wal colourscheme file not found."
-
 	exit 1
 fi
 
@@ -44,69 +43,69 @@ cat <<EOF >"${THEME_FILE}"
       "appearance": "dark",
       "style": {
         "background.appearance": "opaque",
-        "border": "${color8}",
-        "border.variant": "${color8}",
-        "border.focused": "${color9}",
-        "border.selected": "${color8}",
-        "border.transparent": "${color8}",
-        "border.disabled": "${color8}",
+        "border": "${color8}77",
+        "border.variant": "${color8}55",
+        "border.focused": "${color1}",
+        "border.selected": "${color1}77",
+        "border.transparent": "${color8}33",
+        "border.disabled": "${color8}55",
         "elevated_surface.background": "${color0}",
         "surface.background": "${color0}",
         "background": "${background}",
         "element.background": "${color0}",
-        "element.hover": "${color1}",
-        "element.active": "${color2}",
-        "element.selected": "${color3}",
-        "element.disabled": "${color8}",
-        "drop_target.background": "${color3}",
+        "element.hover": "${color8}33",
+        "element.active": "${color8}55",
+        "element.selected": "${color8}77",
+        "element.disabled": "${color8}33",
+        "drop_target.background": "${color1}33",
         "ghost_element.background": "${color0}",
-        "ghost_element.hover": "${color1}",
-        "ghost_element.active": "${color2}",
-        "ghost_element.selected": "${color3}",
-        "ghost_element.disabled": "${color8}",
+        "ghost_element.hover": "${color8}22",
+        "ghost_element.active": "${color8}44",
+        "ghost_element.selected": "${color8}66",
+        "ghost_element.disabled": "${color8}22",
         "text": "${foreground}",
-        "text.muted": "${color8}",
-        "text.placeholder": "${color8}",
-        "text.disabled": "${color8}",
-        "text.accent": "${color10}",
+        "text.muted": "${color8}b0",
+        "text.placeholder": "${color8}77",
+        "text.disabled": "${color8}55",
+        "text.accent": "${color1}",
         "icon": "${color8}",
-        "icon.muted": "${color8}",
-        "icon.disabled": "${color8}",
-        "icon.placeholder": "${color8}",
-        "icon.accent": "${color10}",
+        "icon.muted": "${color8}77",
+        "icon.disabled": "${color8}55",
+        "icon.placeholder": "${color8}66",
+        "icon.accent": "${color1}",
         "status_bar.background": "${background}",
         "title_bar.background": "${background}",
         "toolbar.background": "${background}",
         "tab_bar.background": "${background}",
         "tab.inactive_background": "${background}",
-        "tab.active_background": "${background}10",
+        "tab.active_background": "${background}",
         "tab.active_foreground": "${foreground}",
-        "tab.inactive_foreground": "${foreground}",
-        "tab.unfocused_active_foreground": "${color1}",
-        "tab.unfocused_inactive_foreground": "${background}",
-        "search.match_background": "${color3}",
+        "tab.inactive_foreground": "${foreground}99",
+        "tab.unfocused_active_foreground": "${foreground}99",
+        "tab.unfocused_inactive_foreground": "${foreground}77",
+        "search.match_background": "${color1}44",
         "panel.background": "${background}",
-        "panel.focused_border": "${color9}",
-        "pane.focused_border": "${color9}",
-        "pane_group.border": "${color8}",
-        "scrollbar.thumb.background": "${color8}",
-        "scrollbar.thumb.hover_background": "${color7}",
-        "scrollbar.thumb.border": "${color8}",
+        "panel.focused_border": "${color1}",
+        "pane.focused_border": "${color1}",
+        "pane_group.border": "${color8}33",
+        "scrollbar.thumb.background": "${color7}44",
+        "scrollbar.thumb.hover_background": "${color7}77",
+        "scrollbar.thumb.border": "transparent",
         "scrollbar.track.background": "${background}",
-        "scrollbar.track.border": "${color8}",
+        "scrollbar.track.border": "transparent",
         "editor.foreground": "${foreground}",
         "editor.background": "${background}",
         "editor.gutter.background": "${background}",
         "editor.subheader.background": "${color0}",
-        "editor.active_line.background": "${color3}",
-        "editor.highlighted_line.background": "${color1}",
-        "editor.line_number": "${color7}",
+        "editor.active_line.background": "${color7}22",
+        "editor.highlighted_line.background": "${color8}33",
+        "editor.line_number": "${color8}92",
         "editor.active_line_number": "${color8}",
-        "editor.invisible": "${color8}",
-        "editor.wrap_guide": "${color8}",
-        "editor.active_wrap_guide": "${color8}",
-        "editor.document_highlight.read_background": "${color3}",
-        "editor.document_highlight.write_background": "${color4}",
+        "editor.invisible": "${color8}66",
+        "editor.wrap_guide": "${color8}44",
+        "editor.active_wrap_guide": "${color8}77",
+        "editor.document_highlight.read_background": "${color8}44",
+        "editor.document_highlight.write_background": "${color2}77",
         "terminal.background": "${background}",
         "terminal.foreground": "${foreground}",
         "terminal.bright_foreground": "${color15}",
@@ -135,79 +134,89 @@ cat <<EOF >"${THEME_FILE}"
         "terminal.ansi.white": "${color7}",
         "terminal.ansi.bright_white": "${color15}",
         "terminal.ansi.dim_white": "${color15}",
-        "link_text.hover": "${color4}",
+        "link_text.hover": "${color1}",
         "conflict": "${color1}",
-        "conflict.background": "${color0}",
+        "conflict.background": "${color1}33",
         "conflict.border": "${color1}",
         "created": "${color2}",
-        "created.background": "${color0}",
+        "created.background": "${color2}33",
         "created.border": "${color2}",
-        "deleted": "${color1}",
-        "deleted.background": "${color0}",
-        "deleted.border": "${color1}",
+        "deleted": "${color4}",
+        "deleted.background": "${color4}33",
+        "deleted.border": "${color4}",
         "error": "${color1}",
-        "error.background": "${color0}",
+        "error.background": "${color1}22",
         "error.border": "${color1}",
-        "hidden": "${color8}",
-        "hidden.background": "${color0}",
-        "hidden.border": "${color8}",
-        "hint": "${color8}",
-        "hint.background": "${color0}",
-        "hint.border": "${color8}",
-        "ignored": "${color8}",
-        "ignored.background": "${color0}",
-        "ignored.border": "${color8}",
+        "hidden": "${color8}77",
+        "hidden.background": "${color8}22",
+        "hidden.border": "${color8}55",
+        "hint": "${color8}b0",
+        "hint.background": "${color8}22",
+        "hint.border": "${color8}55",
+        "ignored": "${color8}66",
+        "ignored.background": "${color8}22",
+        "ignored.border": "${color8}44",
         "info": "${color4}",
-        "info.background": "${color0}",
+        "info.background": "${color4}22",
         "info.border": "${color4}",
         "modified": "${color3}",
-        "modified.background": "${color0}",
+        "modified.background": "${color3}33",
         "modified.border": "${color3}",
         "predictive": "${color5}",
-        "predictive.background": "${color0}",
+        "predictive.background": "${color5}22",
         "predictive.border": "${color5}",
         "renamed": "${color6}",
-        "renamed.background": "${color0}",
+        "renamed.background": "${color6}33",
         "renamed.border": "${color6}",
         "success": "${color2}",
-        "success.background": "${color0}",
+        "success.background": "${color2}22",
         "success.border": "${color2}",
-        "unreachable": "${color8}",
-        "unreachable.background": "${color0}",
-        "unreachable.border": "${color8}",
+        "unreachable": "${color8}55",
+        "unreachable.background": "${color8}22",
+        "unreachable.border": "${color8}44",
         "warning": "${color3}",
-        "warning.background": "${color0}",
+        "warning.background": "${color3}22",
         "warning.border": "${color3}",
         "players": [
           {
             "cursor": "${cursor}",
-            "background": "${color0}",
-            "selection": "${color1}"
+            "background": "${color1}33",
+            "selection": "${color8}77"
           }
         ],
         "syntax": {
           "attribute": {
-            "color": "${color13}",
+            "color": "${color11}",
             "font_style": "normal",
             "font_weight": "normal"
           },
           "comment": {
-            "color": "${color8}",
+            "color": "${color8}b0",
             "font_style": "italic",
             "font_weight": "normal"
           },
           "comment.doc": {
-            "color": "${color8}",
+            "color": "${color8}b0",
             "font_style": "italic",
             "font_weight": "normal"
           },
           "constant": {
-            "color": "${color3}",
+            "color": "${color5}",
+            "font_style": "normal",
+            "font_weight": "normal"
+          },
+          "constant.builtin": {
+            "color": "${color1}",
+            "font_style": "normal",
+            "font_weight": "normal"
+          },
+          "constant.language": {
+            "color": "${color1}",
             "font_style": "normal",
             "font_weight": "normal"
           },
           "constructor": {
-            "color": "${color5}",
+            "color": "${color13}",
             "font_style": "normal",
             "font_weight": "normal"
           },
@@ -217,62 +226,77 @@ cat <<EOF >"${THEME_FILE}"
             "font_weight": "normal"
           },
           "function": {
-            "color": "${color1}",
+            "color": "${color13}",
+            "font_style": "normal",
+            "font_weight": "normal"
+          },
+          "function.builtin": {
+            "color": "${color5}",
+            "font_style": "normal",
+            "font_weight": "normal"
+          },
+          "function.call": {
+            "color": "${color11}",
             "font_style": "normal",
             "font_weight": "normal"
           },
           "keyword": {
-            "color": "${color2}",
+            "color": "${color1}",
+            "font_style": "normal",
+            "font_weight": "normal"
+          },
+          "keyword.operator": {
+            "color": "${color11}",
             "font_style": "normal",
             "font_weight": "normal"
           },
           "link_text": {
-            "color": "${color10}",
+            "color": "${color2}",
             "font_style": "normal",
             "font_weight": "normal"
           },
           "link_uri": {
-            "color": "${color10}",
+            "color": "${color2}",
             "font_style": "normal",
             "font_weight": "normal"
           },
           "number": {
-            "color": "${color3}",
+            "color": "${color5}",
             "font_style": "normal",
             "font_weight": "normal"
           },
           "operator": {
-            "color": "${color6}",
+            "color": "${color11}",
             "font_style": "normal",
             "font_weight": "normal"
           },
           "property": {
-            "color": "${foreground}",
+            "color": "${color2}",
             "font_style": "normal",
             "font_weight": "normal"
           },
           "punctuation": {
-            "color": "${color7}",
+            "color": "${foreground}b0",
             "font_style": "normal",
             "font_weight": "normal"
           },
           "punctuation.bracket": {
-            "color": "${color7}",
+            "color": "${foreground}",
             "font_style": "normal",
             "font_weight": "normal"
           },
           "punctuation.delimiter": {
-            "color": "${color7}",
+            "color": "${foreground}b0",
             "font_style": "normal",
             "font_weight": "normal"
           },
           "punctuation.list_marker": {
-            "color": "${color7}",
+            "color": "${color11}",
             "font_style": "normal",
             "font_weight": "normal"
           },
           "punctuation.special": {
-            "color": "${color7}",
+            "color": "${color3}",
             "font_style": "normal",
             "font_weight": "normal"
           },
@@ -282,17 +306,17 @@ cat <<EOF >"${THEME_FILE}"
             "font_weight": "normal"
           },
           "string.escape": {
-            "color": "${color10}",
+            "color": "${color14}",
             "font_style": "normal",
             "font_weight": "normal"
           },
           "string.regex": {
-            "color": "${color10}",
+            "color": "${color14}",
             "font_style": "normal",
             "font_weight": "normal"
           },
           "string.special": {
-            "color": "${color10}",
+            "color": "${color14}",
             "font_style": "normal",
             "font_weight": "normal"
           },
@@ -311,14 +335,34 @@ cat <<EOF >"${THEME_FILE}"
             "font_style": "normal",
             "font_weight": "normal"
           },
+          "type": {
+            "color": "${color12}",
+            "font_style": "normal",
+            "font_weight": "normal"
+          },
+          "type.builtin": {
+            "color": "${color2}",
+            "font_style": "normal",
+            "font_weight": "normal"
+          },
           "variable": {
             "color": "${foreground}",
             "font_style": "normal",
             "font_weight": "normal"
           },
-          "variable.special": {
-            "color": "${foreground}",
+          "variable.member": {
+            "color": "${color1}",
             "font_style": "normal",
+            "font_weight": "normal"
+          },
+          "variable.parameter": {
+            "color": "${color15}",
+            "font_style": "normal",
+            "font_weight": "normal"
+          },
+          "variable.special": {
+            "color": "${color2}",
+            "font_style": "italic",
             "font_weight": "normal"
           }
         }
