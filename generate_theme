@@ -18,8 +18,8 @@ while [[ $# -gt 0 ]]; do
         --list)
             echo "Available modes:"
             for template in "${TEMPLATES_DIRECTORY}"/*.json.template; do
-                if [[ -f "$template" ]]; then
-                    echo "  $(basename "$template" .json.template)"
+                if [[ -f "${template}" ]]; then
+                    echo "  $(basename "${template}" .json.template)"
                 fi
             done
             exit 0
@@ -59,8 +59,8 @@ fi
 if [[ ! -f "${TEMPLATE_FILE}" ]]; then
     echo "error: mode '${MODE}' not found. Available modes:"
     for template in "${TEMPLATES_DIRECTORY}"/*.json.template; do
-        if [[ -f "$template" ]]; then
-            echo "  $(basename "$template" .json.template)"
+        if [[ -f "${template}" ]]; then
+            echo "  $(basename "${template}" .json.template)"
         fi
     done
     exit 1
