@@ -3,7 +3,7 @@
 # shellcheck disable=SC2154
 
 # Default mode
-MODE="original"
+MODE="default"
 # The directory of this script, so that this script can be called from anywhere
 EXTENSION_DIRECTORY="$(dirname "${0}")"
 
@@ -16,7 +16,7 @@ while [[ $# -gt 0 ]]; do
             ;;
         --list)
             echo "Available modes:"
-            for template in "${EXTENSION_DIRECTORY}/modes"/*.json.template; do
+            for template in "${EXTENSION_DIRECTORY}/templates"/*.json.template; do
                 if [[ -f "$template" ]]; then
                     echo "  $(basename "$template" .json.template)"
                 fi
@@ -27,7 +27,7 @@ while [[ $# -gt 0 ]]; do
             echo "Usage: $0 [--mode MODE] [--list]"
             echo ""
             echo "Options:"
-            echo "  --mode MODE    Select theme mode (default: original)"
+            echo "  --mode MODE    Select theme mode (default: default)"
             echo "  --list         List available modes"
             echo "  --help, -h     Show this help"
             echo ""
@@ -46,7 +46,7 @@ WAL_COLOURS_FILE="${HOME}/.cache/wal/colors.json"
 # The file to write the generated theme to, and that Zed will read
 THEME_FILE="${EXTENSION_DIRECTORY}/themes/wal-theme.json"
 # The template file for the selected mode (contains theme JSON with variable placeholders)
-TEMPLATE_FILE="${EXTENSION_DIRECTORY}/modes/${MODE}.json.template"
+TEMPLATE_FILE="${EXTENSION_DIRECTORY}/templates/${MODE}.json.template"
 
 # If the wal colour scheme file does not exist, exit with an error
 if [[ ! -f "${WAL_COLOURS_FILE}" ]]; then
@@ -57,7 +57,7 @@ fi
 # Check if mode file exists
 if [[ ! -f "${TEMPLATE_FILE}" ]]; then
     echo "error: mode '${MODE}' not found. Available modes:"
-    for template in "${EXTENSION_DIRECTORY}/modes"/*.json.template; do
+    for template in "${EXTENSION_DIRECTORY}/templates"/*.json.template; do
         if [[ -f "$template" ]]; then
             echo "  $(basename "$template" .json.template)"
         fi
