@@ -43,7 +43,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 # Your wal colour scheme file
-WAL_COLOURS_FILE="${HOME}/.cache/wal/colors.json"
+WAL_COLOURS_FILE="${HOME}/.cache/hellwal/colors.json"
 # The file to write the generated theme to, and that Zed will read
 THEME_FILE="${EXTENSION_DIRECTORY}/themes/wal-theme.json"
 # The template file for the selected mode (contains theme JSON with variable placeholders)
